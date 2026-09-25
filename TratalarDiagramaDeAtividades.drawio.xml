@@ -1,0 +1,146 @@
+<mxfile host="app.diagrams.net" agent="draw.io">
+  <diagram name="Atividades — Agendar, executar e pagar serviço recorrente" id="tratalar-atividades">
+    <mxGraphModel dx="2009" dy="1114" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="1900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <!-- ============ RAIAS ============ -->
+        <mxCell id="lane1" parent="1" style="swimlane;html=1;horizontal=1;startSize=40;fillColor=none;swimlaneFillColor=#F6FBF8;strokeColor=#C9D4CF;fontSize=15;fontStyle=1;fontColor=#1D4634;" value="Cliente" vertex="1">
+          <mxGeometry height="1800" width="380" x="40" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lane2" parent="1" style="swimlane;html=1;horizontal=1;startSize=40;fillColor=none;swimlaneFillColor=#FBFCFB;strokeColor=#C9D4CF;fontSize=15;fontStyle=1;fontColor=#1D4634;" value="Sistema TrataLar" vertex="1">
+          <mxGeometry height="1800" width="380" x="420" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="lane3" parent="1" style="swimlane;html=1;horizontal=1;startSize=40;fillColor=none;swimlaneFillColor=#F7FBFE;strokeColor=#C9D4CF;fontSize=15;fontStyle=1;fontColor=#1D4634;" value="Prestador" vertex="1">
+          <mxGeometry height="1800" width="380" x="800" y="40" as="geometry" />
+        </mxCell>
+
+        <!-- ============ RAIA CLIENTE ============ -->
+        <mxCell id="start" parent="lane1" style="ellipse;fillColor=#1D4634;strokeColor=none;" vertex="1">
+          <mxGeometry height="30" width="30" x="175" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="a1" parent="lane1" style="rounded=1;arcSize=24;whiteSpace=wrap;html=1;fillColor=#EAF6F0;strokeColor=#2F7D5C;fontColor=#1D4634;fontSize=13;strokeWidth=2;" value="Buscar prestadores (categoria, região e avaliação)" vertex="1">
+          <mxGeometry height="60" width="300" x="40" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="a2" parent="lane1" style="rounded=1;arcSize=24;whiteSpace=wrap;html=1;fillColor=#EAF6F0;strokeColor=#2F7D5C;fontColor=#1D4634;fontSize=13;strokeWidth=2;" value="Selecionar prestador, data e recorrência" vertex="1">
+          <mxGeometry height="60" width="300" x="40" y="290" as="geometry" />
+        </mxCell>
+        <mxCell id="pay" parent="lane1" style="rounded=1;arcSize=24;whiteSpace=wrap;html=1;fillColor=#EAF6F0;strokeColor=#2F7D5C;fontColor=#1D4634;fontSize=13;strokeWidth=2;" value="Realizar pagamento do serviço" vertex="1">
+          <mxGeometry height="60" width="300" x="40" y="1170" as="geometry" />
+        </mxCell>
+        <mxCell id="a3" parent="lane1" style="rounded=1;arcSize=24;whiteSpace=wrap;html=1;fillColor=#EAF6F0;strokeColor=#2F7D5C;fontColor=#1D4634;fontSize=13;strokeWidth=2;" value="Avaliar o serviço — opcional (nota 1–5 e comentário)" vertex="1">
+          <mxGeometry height="60" width="300" x="40" y="1610" as="geometry" />
+        </mxCell>
+        <mxCell id="end" parent="lane1" style="ellipse;fillColor=#FFFFFF;strokeColor=#1D4634;strokeWidth=3;" vertex="1">
+          <mxGeometry height="34" width="34" x="173" y="1720" as="geometry" />
+        </mxCell>
+        <mxCell id="endi" parent="lane1" style="ellipse;fillColor=#1D4634;strokeColor=none;" vertex="1">
+          <mxGeometry height="18" width="18" x="181" y="1728" as="geometry" />
+        </mxCell>
+
+        <!-- ============ RAIA SISTEMA ============ -->
+        <mxCell id="s1" parent="lane2" style="rounded=1;arcSize=24;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#8A9A92;fontColor=#2F3E38;fontSize=13;strokeWidth=2;" value="Exibir prestadores ranqueados (matching por região e reputação)" vertex="1">
+          <mxGeometry height="60" width="300" x="40" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="s2" parent="lane2" style="rounded=1;arcSize=24;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#8A9A92;fontColor=#2F3E38;fontSize=13;strokeWidth=2;" value="Registrar solicitação (Solicitado) e disponibilizá-la no painel do prestador" vertex="1">
+          <mxGeometry height="60" width="300" x="40" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="s3" parent="lane2" style="rounded=1;arcSize=24;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#8A9A92;fontColor=#2F3E38;fontSize=13;strokeWidth=2;" value="Registrar recusa e sugerir outros prestadores da categoria" vertex="1">
+          <mxGeometry height="60" width="300" x="40" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="s4" parent="lane2" style="rounded=1;arcSize=24;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#8A9A92;fontColor=#2F3E38;fontSize=13;strokeWidth=2;" value="Confirmar agendamento (Confirmado) e inserir na agenda" vertex="1">
+          <mxGeometry height="60" width="300" x="40" y="850" as="geometry" />
+        </mxCell>
+        <mxCell id="s7" parent="lane2" style="rounded=1;arcSize=24;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#8A9A92;fontColor=#2F3E38;fontSize=13;strokeWidth=2;" value="Registrar conclusão (Concluído) e liberar o pagamento ao cliente" vertex="1">
+          <mxGeometry height="60" width="300" x="40" y="1060" as="geometry" />
+        </mxCell>
+        <mxCell id="s5" parent="lane2" style="rounded=1;arcSize=24;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#8A9A92;fontColor=#2F3E38;fontSize=13;strokeWidth=2;" value="Processar pagamento simulado (comissão de 12%) e marcar como Pago" vertex="1">
+          <mxGeometry height="60" width="300" x="40" y="1280" as="geometry" />
+        </mxCell>
+        <mxCell id="d2" parent="lane2" style="rhombus;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#8A9A92;fontColor=#2F3E38;fontSize=13;fontStyle=1;strokeWidth=2;" value="Agendamento recorrente?" vertex="1">
+          <mxGeometry height="90" width="210" x="85" y="1390" as="geometry" />
+        </mxCell>
+        <mxCell id="s6" parent="lane2" style="rounded=1;arcSize=24;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#8A9A92;fontColor=#2F3E38;fontSize=13;strokeWidth=2;" value="Gerar próxima ocorrência da série (gerarProximaOcorrencia)" vertex="1">
+          <mxGeometry height="60" width="300" x="40" y="1520" as="geometry" />
+        </mxCell>
+        <mxCell id="nota6" parent="lane2" style="shape=note;whiteSpace=wrap;html=1;backgroundOutline=1;darkOpacity=0.05;fillColor=#FFF8E1;strokeColor=#D9B451;fontColor=#6B5416;fontSize=11;size=14;align=left;spacingLeft=6;" value="A próxima visita nasce Confirmada na agenda do prestador, na mesma série — sem novo pedido do cliente." vertex="1">
+          <mxGeometry height="72" width="180" x="185" y="1596" as="geometry" />
+        </mxCell>
+
+        <!-- ============ RAIA PRESTADOR ============ -->
+        <mxCell id="p1" parent="lane3" style="rounded=1;arcSize=24;whiteSpace=wrap;html=1;fillColor=#E3F2FB;strokeColor=#2E9BD6;fontColor=#123F63;fontSize=13;strokeWidth=2;" value="Analisar solicitação" vertex="1">
+          <mxGeometry height="60" width="300" x="40" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="d1" parent="lane3" style="rhombus;whiteSpace=wrap;html=1;fillColor=#E3F2FB;strokeColor=#2E9BD6;fontColor=#123F63;fontSize=13;fontStyle=1;strokeWidth=2;" value="Aceitar o pedido?" vertex="1">
+          <mxGeometry height="90" width="190" x="95" y="665" as="geometry" />
+        </mxCell>
+        <mxCell id="p3" parent="lane3" style="rounded=1;arcSize=24;whiteSpace=wrap;html=1;fillColor=#E3F2FB;strokeColor=#2E9BD6;fontColor=#123F63;fontSize=13;strokeWidth=2;" value="Realizar o serviço e marcá-lo como concluído" vertex="1">
+          <mxGeometry height="60" width="300" x="40" y="960" as="geometry" />
+        </mxCell>
+
+        <!-- ============ FLUXO DE CONTROLE ============ -->
+        <mxCell id="e_start_a1" edge="1" parent="1" source="start" target="a1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#77847E;strokeWidth=2;fontSize=12;fontStyle=2;fontColor=#5F6F68;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a1_s1" edge="1" parent="1" source="a1" target="s1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#77847E;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s1_a2" edge="1" parent="1" source="s1" target="a2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#77847E;strokeWidth=2;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a2_s2" edge="1" parent="1" source="a2" target="s2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#77847E;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s2_p1" edge="1" parent="1" source="s2" target="p1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#77847E;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_p1_d1" edge="1" parent="1" source="p1" target="d1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#77847E;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_d1_s3" edge="1" parent="1" source="d1" target="s3" value="[não]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#77847E;strokeWidth=2;fontSize=12;fontStyle=2;fontColor=#5F6F68;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s3_a2" edge="1" parent="1" source="s3" target="a2" value="cliente escolhe outro" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#77847E;strokeWidth=2;fontSize=12;fontStyle=2;fontColor=#5F6F68;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_d1_s4" edge="1" parent="1" source="d1" target="s4" value="[sim]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#77847E;strokeWidth=2;fontSize=12;fontStyle=2;fontColor=#5F6F68;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s4_p3" edge="1" parent="1" source="s4" target="p3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#77847E;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_p3_s7" edge="1" parent="1" source="p3" target="s7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#77847E;strokeWidth=2;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s7_pay" edge="1" parent="1" source="s7" target="pay" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#77847E;strokeWidth=2;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_pay_s5" edge="1" parent="1" source="pay" target="s5" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#77847E;strokeWidth=2;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s5_d2" edge="1" parent="1" source="s5" target="d2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#77847E;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_d2_s6" edge="1" parent="1" source="d2" target="s6" value="[sim]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#77847E;strokeWidth=2;fontSize=12;fontStyle=2;fontColor=#5F6F68;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s6_a3" edge="1" parent="1" source="s6" target="a3" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#77847E;strokeWidth=2;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_d2_a3" edge="1" parent="1" source="d2" target="a3" value="[não]" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#77847E;strokeWidth=2;fontSize=12;fontStyle=2;fontColor=#5F6F68;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_a3_end" edge="1" parent="1" source="a3" target="end" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;strokeColor=#77847E;strokeWidth=2;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+        <!-- Âncora da nota explicativa (associação tracejada, não é fluxo de controle) -->
+        <mxCell id="e_nota6" edge="1" parent="1" source="nota6" target="s6" style="endArrow=none;dashed=1;html=1;strokeColor=#D9B451;strokeWidth=1;">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
